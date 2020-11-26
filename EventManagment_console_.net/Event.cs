@@ -73,12 +73,12 @@ namespace EventManagment_console_.net
 
         public override string ToString()
         {
-            string s = "Event: " + eventId + "\nName: " + eventName;
-            s = s + "\nVenue: " + venue;
-            s = s + "\nDate:" + eventDate;
-            s = s + "\nRegistered Attendees:" + numAttendees;
-            s = s + "\nAvailable spaces:" + (maxAttendees - numAttendees);
-            s = s + getAttendees();
+            string s = "Event ID : " + eventId + "\nName: " + eventName;
+            s += "\nVenue: " + venue;
+            s += "\nDate:" + eventDate;
+            s += "\nRegistered Attendees:" + numAttendees;
+            s += "\nAvailable spaces:" + (maxAttendees - numAttendees);
+            s += getAttendees();
             return s;
         }
 

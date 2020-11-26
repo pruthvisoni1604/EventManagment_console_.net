@@ -8,19 +8,28 @@ namespace EventManagment_console_.net
 {
     class Customer
     {
-        internal int getId()
+        private int custId;
+        private string firstName;
+        private string lastName;
+        private DateTime birthDate;
+        private string dateCreated;
+
+        public Customer(int custId, string fName, string lName, DateTime birthDate)
         {
-            throw new NotImplementedException();
+            this.custId = custId;
+            this.firstName = fName;
+            this.lastName = lName;
+            this.birthDate = birthDate;
+            dateCreated = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt");
         }
 
-        internal string getFirstName()
+        public int getId() { return custId; }
+        public string getFirstName() { return firstName; }
+        public string getLastName() { return lastName; }
+        public override string ToString()
         {
-            throw new NotImplementedException();
-        }
-
-        internal string getLastName()
-        {
-            throw new NotImplementedException();
+            string s = "";
+            return s;
         }
     }
 }
