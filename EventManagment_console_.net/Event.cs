@@ -17,10 +17,10 @@ namespace EventManagment_console_.net
         private string dateCreated;
         private Customer[] attendeeList;
 
-        public Event(int eventId, string name, string venue, DateTime eventDate, int maxAttendees)
+        public Event(int eventId, string eventName, string venue, DateTime eventDate, int maxAttendees)
         {
             this.eventId = eventId;
-            this.eventName = name;
+            this.eventName = eventName;
             this.venue = venue;
             this.eventDate = eventDate;
             this.maxAttendees = maxAttendees;
@@ -76,7 +76,6 @@ namespace EventManagment_console_.net
             }
             return s;
         }
-
         public override string ToString()
         {
             string s = "Event ID : " + eventId + "\nName: " + eventName;
