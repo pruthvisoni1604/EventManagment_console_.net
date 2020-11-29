@@ -34,6 +34,11 @@ namespace EventManagment_console_.net
         public string getVenue() { return venue; }
         public int getMaxAttendees() { return maxAttendees; }
         public int getNumAttendees() { return numAttendees; }
+        public string getEventInfo()
+        {
+            string s = "event Id: " + eventId + "\nEvent name: " + eventName;
+            return s;
+        }
         public bool addAttendee(Customer c)
         {
             if (numAttendees >= maxAttendees) { return false; }
@@ -55,7 +60,8 @@ namespace EventManagment_console_.net
         public bool removeAttendee(int custId)
         {
             int loc = findAttendee(custId);
-            if (loc == -1) return false;
+            if (loc == -1)
+                return false;
             attendeeList[loc] = attendeeList[numAttendees - 1];
             numAttendees--;
             return true;

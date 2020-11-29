@@ -8,9 +8,10 @@ namespace EventManagment_console_.net
 {
     class Program
     {
-        private static EventHandler eh=new EventHandler();
+        private static CustomerEventHandler eh;
         static void Main(string[] args)
         {
+            eh = new CustomerEventHandler();
             while (true)
             {
                 Console.Clear();
@@ -24,7 +25,7 @@ namespace EventManagment_console_.net
                 switch (Console.ReadKey().KeyChar)
                 {
                     case '1':
-                        CustomerOptions();
+                        eh.CustomerOptions();
                         break;
                     case '2':
                         eh.EventOptions();
@@ -45,38 +46,6 @@ namespace EventManagment_console_.net
                 }
             }
         }
-        private static void CustomerOptions()
-        {
-            while (true)
-            {
-                Console.Clear();
-                Console.WriteLine("Andrew's Event Managment Limited.");
-                Console.WriteLine("Customer Menu.");
-                Console.WriteLine("Please select a choice from the menu below:");
-                Console.WriteLine("1: Add Customer");
-                Console.WriteLine("2: View Customers");
-                Console.WriteLine("3: View Customer Details");
-                Console.WriteLine("4: Delete Customer");
-                Console.WriteLine("5: Return to the main menu.\n");
-
-                switch (Console.ReadKey().KeyChar)
-                {
-                    case '1':
-                        break;
-                    case '2':
-                        break;
-                    case '3':
-                        break;
-                    case '4':
-                        break;
-                    case '5':
-                        return;
-                    default:
-                        break;
-                }
-            }
-        }
-        
         private static void RSVPForEvent()
         {
             while (true)

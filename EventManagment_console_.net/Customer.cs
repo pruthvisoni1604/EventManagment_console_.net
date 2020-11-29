@@ -11,16 +11,12 @@ namespace EventManagment_console_.net
         private int custId;
         private string firstName;
         private string lastName;
-        private DateTime birthDate;
-        private string dateCreated;
 
-        public Customer(int custId, string fName, string lName, DateTime birthDate)
+        public Customer(int custId, string fName, string lName)
         {
             this.custId = custId;
-            this.firstName = fName;
-            this.lastName = lName;
-            this.birthDate = birthDate;
-            dateCreated = DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt");
+            firstName = fName;
+            lastName = lName;
         }
 
         public int getId() { return custId; }
@@ -28,8 +24,12 @@ namespace EventManagment_console_.net
         public string getLastName() { return lastName; }
         public override string ToString()
         {
-            string s = "";
+            string s = "Customer Id: " + custId + "\nCustomer first name: " + firstName + "\nCustomer last name: " + lastName;
             return s;
+        }
+        public void decrementId()
+        {
+            custId--;
         }
     }
 }
