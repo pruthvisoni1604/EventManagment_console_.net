@@ -8,10 +8,10 @@ namespace EventManagment_console_.net
 {
     class Program
     {
-        private static Handler eh;
+        private static Handler h;
         static void Main(string[] args)
         {
-            eh = new Handler();
+            h = new Handler();
             while (true)
             {
                 Console.Clear();
@@ -61,9 +61,10 @@ namespace EventManagment_console_.net
                 switch (Console.ReadKey().KeyChar)
                 {
                     case '1':
-                        eh.RSVPForEvent();
+                        h.RSVPForEvent();
                         break;
                     case '2':
+                        h.viewRSVP();//sdfgkjdfbgjhsbdfkhvijgbskdfbghjsbdkijfghisdfhijgshidfubvishjzdebfkvhsbreiuvbasieruahiogerhoagiurhogiauwhriougawhroiugouaiwh
                         break;
                     case '3':
                         return;
@@ -89,10 +90,10 @@ namespace EventManagment_console_.net
                 switch (Console.ReadKey().KeyChar)
                 {
                     case '1':
-                        eh.AddEvent();
+                        h.AddEvent();
                         break;
                     case '2':
-                        foreach (Event e in eh.events)
+                        foreach (Event e in h.events)
                         {
                             Console.WriteLine(e.getEventInfo());
                         }
@@ -100,7 +101,7 @@ namespace EventManagment_console_.net
                         Console.ReadKey();
                         break;
                     case '3':
-                        eh.findEvent();
+                        h.findEvent();
                         break;
                     case '4':
                         return;
@@ -129,10 +130,10 @@ namespace EventManagment_console_.net
                 switch (Console.ReadKey().KeyChar)
                 {
                     case '1':
-                        eh.AddCustomer();
+                        h.AddCustomer();
                         break;
                     case '2':
-                        foreach (Customer c in eh.cust)
+                        foreach (Customer c in h.cust)
                         {
                             Console.WriteLine(c.ToString() + "\n");
                         }
@@ -140,10 +141,10 @@ namespace EventManagment_console_.net
                         Console.ReadKey();
                         break;
                     case '3':
-                        eh.FindCustomer();
+                        h.FindCustomer();
                         break;
                     case '4':
-                        eh.DeleteCustomer();
+                        h.DeleteCustomer();
                         break;
                     case '5':
                         return;

@@ -102,6 +102,25 @@ namespace EventManagment_console_.net
             Console.WriteLine("Enter Customer ID");
             custId = readId();
 
+            if (eventId < events.Count)
+            {
+                if (custId < cust.Count)
+                {
+                    events[eventId].addAttendee(cust[custId]);
+                }
+                else
+                {
+                    Console.WriteLine("No customer found");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No event found");
+            }
+            Console.ReadKey();
+        }
+        public void viewRSVP()
+        {
 
         }
         private bool checkDate(string date)
